@@ -1,0 +1,64 @@
+$primary: #4a87f8; //#4280f5;
+$black: #222222;
+$shadow: 0px 0px 37px rgba(0, 0, 0, 0.11);
+
+$section_padding_laptop: 40px 80px;
+$section_padding_tablet: 20px 40px;
+$section_padding_phone: 10px 20px;
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin sectionWrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: $section_padding_laptop;
+
+  @include flexCenter(column);
+
+  @media (max-width: 800px) {
+    padding: $section_padding_tablet;
+  }
+
+  @media (max-width: 500px) {
+    padding: $section_padding_phone;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    background: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 40px;
+  }
+}
+
+.section-title {
+  font-family: Bold;
+  font-size: 40px;
+  text-align: center;
+  margin: 40px;
+  color: #222;
+
+  @media (max-width: 600px) {
+    margin: 30px;
+    font-size: 30px;
+  }
+}
+
+
+@import "fonts";
+@import "landing-page";
+@import "about-me";
+@import "skills";
+@import "projects";

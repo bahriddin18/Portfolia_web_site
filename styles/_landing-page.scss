@@ -1,0 +1,191 @@
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+
+  .header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 100px;
+    z-index: 9999999999999999999999999999999999;
+    transition: 0.5s ease-in-out;
+
+    .logo {
+      width: 60px;
+      height: 60px;
+
+      background-image: url("../images/testninja-removebg-preview\ \(2\).png");
+      background-size: cover;
+    }
+
+    .burger-icon {
+      @include flexCenter(column);
+      gap: 3px;
+      cursor: pointer;
+      position: relative;
+
+      span {
+        width: 20px;
+        height: 2.3px;
+        border-radius: 20px;
+        background: $black;
+        transition: 0.2s;
+      }
+    }
+
+    .menu {
+      width: 200px;
+      max-height: 0;
+      position: absolute;
+      right: 100px;
+      top: 70px;
+      background: white;
+      transition: 0.5s ease-in-out;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: $shadow;
+
+      ul {
+        a {
+          text-decoration: none;
+
+          li {
+            list-style: none;
+            margin-bottom: 10px;
+            font-family: Regular;
+            color: $black;
+          }
+
+          &:last-child {
+            li {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .show-menu {
+      max-height: 300px;
+      padding: 20px 0;
+    }
+
+    .burger-open {
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:first-child {
+        position: absolute;
+        transform: rotate(45deg);
+      }
+
+      span:last-child {
+        position: absolute;
+        transform: rotate(-45deg);
+      }
+    }
+
+    @media (max-width: 1230px) {
+      padding: 0 70px;
+    }
+
+    @media (max-width: 1080px) {
+      padding: 0 50px;
+    }
+  }
+
+  @media (max-width: 730px) {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 100px;
+
+    @media (max-width: 730px) {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+    }
+
+    .position {
+      font-family: Medium;
+      font-size: 24px;
+      color: $primary;
+    }
+
+    .name {
+      font-family: Bold;
+      font-size: 80px;
+      line-height: 1.2;
+      color: $black;
+      margin-bottom: 24px;
+
+      @media (max-width: 1000px) {
+        font-size: 50px;
+      }
+
+      @media (max-width: 730px) {
+        color: #fff;
+      }
+    }
+
+    .buttons {
+      a {
+        text-decoration: none;
+
+        button {
+          background: $primary;
+          padding: 16px 24px;
+          color: #fff;
+          font-family: Medium;
+          border: none;
+          box-shadow: $shadow;
+          cursor: pointer;
+        }
+
+        &:last-child {
+          button {
+            background: #fff;
+            color: $black;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1230px) {
+      padding-left: 70px;
+    }
+
+    @media (max-width: 1080px) {
+      padding-left: 50px;
+    }
+  }
+
+  .right {
+    background: $primary;
+
+    img {
+      height: 100%;
+      display: block;
+      margin: auto;
+      margin-top: 42px;
+
+      @media (max-width: 530px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
