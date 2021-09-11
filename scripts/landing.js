@@ -10,5 +10,5 @@ const header = document.getElementById("header");
 
 window.addEventListener("scroll", () => {
   header.style.background =
-    window.scrollY > 600 ? "rgba(119, 219, 237, 0.3)" : "transparent";
+    window.scrollY > 600 ? "rgba(119, 219, 247, 0.9)" : "transparent";
 });

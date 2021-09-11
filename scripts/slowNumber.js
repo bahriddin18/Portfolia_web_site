@@ -56,7 +56,7 @@ function format(value) {
 
 window.addEventListener("scroll", function slow() {
   if (window.scrollY > 350) {
-    let fps = 20,
+    let fps = 15,
       els = [].slice.call(document.querySelectorAll(".slowNumber"));
 
     els.forEach(function (el) {
