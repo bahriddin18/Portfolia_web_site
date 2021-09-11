@@ -8,11 +8,11 @@ const aboutMeStats = [
     amount: 634,
   },
   {
-    name: "Experience in years",
+    name: "Years Experience ",
     amount: 5,
   },
   {
-    name: "Working Hourse",
+    name: "Working Hours",
     amount: 1387,
   },
 ];
