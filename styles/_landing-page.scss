@@ -38,7 +38,7 @@
     }
 
     .menu {
-      width: 200px;
+      width: 180px;
       max-height: 0;
       position: absolute;
       right: 100px;
@@ -60,6 +60,9 @@
             margin-bottom: 10px;
             font-family: Regular;
             color: $black;
+            &:hover{
+            color: #4a87f8;
+          }
           }
 
           &:last-child {
@@ -67,10 +70,20 @@
               margin: 0;
             }
           }
+          
         }
       }
+      
     }
+@media (max-width: 700px) {
+        .menu{
+          position: absolute;
+          right: 50px;
+          top: 70px;
+          width: 100px;
 
+        }
+      }
     .show-menu {
       max-height: 300px;
       padding: 20px 0;

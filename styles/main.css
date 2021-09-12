@@ -3,13 +3,20 @@ html {
 }
 
 html ::-webkit-scrollbar {
-  width: 5px;
-  background: white;
+  width: 0;
 }
 
-html ::-webkit-scrollbar-thumb {
-  background: #4a87f8;
-  border-radius: 40px;
+html #progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-box-shadow: -1px 1px 8px -1px rgba(8, 253, 255, 0.76);
+          box-shadow: -1px 1px 8px -1px rgba(8, 253, 255, 0.76);
+  background: -webkit-gradient(linear, left bottom, left top, from(#0eccfb), color-stop(#0d39ff), to(#c10ef8));
+  background: linear-gradient(to top, #0eccfb, #0d39ff, #c10ef8);
 }
 
 .section-title {
@@ -110,7 +117,7 @@ html ::-webkit-scrollbar-thumb {
 }
 
 .landing-page .header .menu {
-  width: 200px;
+  width: 180px;
   max-height: 0;
   position: absolute;
   right: 100px;
@@ -143,8 +150,21 @@ html ::-webkit-scrollbar-thumb {
   color: #222222;
 }
 
+.landing-page .header .menu ul a li:hover {
+  color: #4a87f8;
+}
+
 .landing-page .header .menu ul a:last-child li {
   margin: 0;
+}
+
+@media (max-width: 700px) {
+  .landing-page .header .menu {
+    position: absolute;
+    right: 50px;
+    top: 70px;
+    width: 100px;
+  }
 }
 
 .landing-page .header .show-menu {
