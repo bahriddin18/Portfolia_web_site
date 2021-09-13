@@ -32,7 +32,7 @@ const personalInformation = [
   },
   {
     key: "Email",
-    value: "bakhriddin17@gmail.com",
+    value: "bakhr1dd1n17@gmail.com",
   },
   {
     key: "Phone",
